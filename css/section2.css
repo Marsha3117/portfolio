@@ -1,0 +1,70 @@
+.separador {
+    background-color: #181824;
+    height: 80px;
+    width: 100%;
+}
+
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    color: white;
+    background-color: #fff3ef;
+}
+
+.section2 .info h2 {
+    color: #f18e47;
+}
+
+.section2 .info2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.section2 .info2 h2 {
+    color: #f18e47;
+    font-size: 40px;
+    margin: auto;
+    width: 10%;
+}
+
+.section2 .info2 p {
+    width: 90%;
+}
+
+.section2 .cards {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section2 .card1,
+.section2 .card2,
+.section2 .card3,
+.section2 .card4 {
+    width: 20%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: rgb(122, 62, 17);
+    cursor: pointer;
+    padding: 20px;
+}
+
+.section2 .card1 img,
+.section2 .card2 img,
+.section2 .card3 img,
+.section2 .card4 img {
+    width: 50px;
+}
+
+.section2 .card1:hover,
+.section2 .card2:hover,
+.section2 .card3:hover,
+.section2 .card4:hover {
+    background: #f18e47;
+}
