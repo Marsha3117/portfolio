@@ -1,5 +1,5 @@
 .section2 {
-    background-color: #fff3ef; 
+    background-color: var(--site-color-background); 
     padding: 80px 100px;
     text-align: left; 
 }
@@ -7,7 +7,7 @@
 .section2 h3 {
     font-size: 42px;
     font-weight: 800;
-    color: #f18e47; 
+    color: var(--site-color-naranja); 
     margin-bottom: 50px; 
 }
 
@@ -24,7 +24,7 @@
 .section2 .card3,
 .section2 .card4 {
     /* Manteníamos tus estilos de fondo y transición... */
-    background: rgb(122, 62, 17); /* Fondo oscuro de la tarjeta */
+    background: var(--site-color-coffe); /* Fondo oscuro de la tarjeta */
     color: white; 
     cursor: pointer;
     border-radius: 10px;
@@ -63,7 +63,7 @@
 .section2 .card2:hover,
 .section2 .card3:hover,
 .section2 .card4:hover {
-    background: #f18e47; 
+    background: var(--site-color-lightorange); 
     transform: translateY(-5px); 
 }
 

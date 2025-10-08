@@ -1,5 +1,5 @@
 .formulario, .formulario2 {
-    background-color: #fff3ef;
+    background-color: var(--site-color-darker);
     display: flex;
     flex-direction: column;
     padding: 40px 60px;
@@ -47,7 +47,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #F77712;
+    background-color: var(--site-color-naranja);
     border: none;
     border-radius: 5px;
     cursor: pointer;

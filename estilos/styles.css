@@ -1,3 +1,15 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Quicksand&display=swap'); */
+
+:root {
+  --site-color-naranja: #ee761d;
+  --site-color-background: #fff3ef;
+  --site-color-darker: rgb(53, 36, 6);
+  --site-color-coffe: #783a10;
+  --site-color-lightorange: #f59f5d;
+  /* --site-font-title: 'Fredoka', sans-serif;
+  --site-font-body: 'Quicksand', sans-serif; */
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
@@ -20,7 +32,7 @@ html {
     /* justify-content: space-evenly; funciona, pero para navegación se prefiere space-between 
        o una simple alineación a los lados. Si funciona para ti, déjalo. */
     justify-content: space-between; 
-    background-color: #fff3ef;
+    background-color: var(--site-color-background);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky; 
     top: 0;
@@ -50,7 +62,11 @@ html {
     border-radius: 5px;
     border: 1px solid transparent;
     cursor: pointer;
-    color: black;
+    color: var(--site-color-darker);
+} 
+
+.navbar-menu a:hover {
+    color: var(--site-color-naranja);
 } 
 
 /* ====== banner ====== */
@@ -69,14 +85,14 @@ html {
 .banner h5 { /* Hola, soy */
     font-weight: 550;
     font-size: 20px;
-    color: #000000;
+    color: var(--site-color-darker);
     margin-bottom: 5px;
 }
 
 .banner h1 { /* Mariajosé Ramos */
     font-weight: 800;
     font-size: 58px;
-    color: #783908;
+    color: var(--site-color-coffe);
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -84,7 +100,7 @@ html {
 .banner h2 { /* Diseñadora Digital & Multimedia */
     font-weight: 600;
     font-size: 40px;
-    color: #F77712;
+    color: var(--site-color-naranja);
     margin-top: 10px;
     margin-bottom: 30px;
 }
@@ -92,7 +108,7 @@ html {
 .banner-text h3 { /* Mi Enfoque: */
     font-size: 24px; 
     font-weight: 700;
-    color: #000000; 
+    color: var(--site-color-darker); 
     margin-top: 40px;
     margin-bottom: 15px;
 }
@@ -101,7 +117,7 @@ html {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
-    color: #333333;
+    color: var(--site-color-darker);
     max-width: 90%;
     margin-bottom: 20px;
 }
@@ -117,7 +133,8 @@ html {
 /* ====== footer ====== */
 
 footer {
-    background-color: #fff3ef;
+    background-color: var(--site-color-background);
+    color: var(--site-color-darker);
 }
 
 #LogoFooter {
@@ -157,11 +174,6 @@ row>div:nth-child(2) {
 
 /*Media query Pantallas (sm y xs)  */
 @media (max-width: 767.98px) {
-    #LogoFitNation {
-        max-width: 120px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 
     .container_footer .col-md-4 div {
         font-size: 0.8rem;
@@ -183,29 +195,29 @@ row>div:nth-child(2) {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 500;
-    color: #000000;
-    background-color: #F77712; 
+    color: var(--site-color-darker);
+    background-color: var(--site-color-naranja); 
     border-radius: 5px;
-    border: 1px solid #F77712;
+    border: 1px solid var(--site-color-naranja);
     cursor: pointer;
 }
 
 .ver:hover {
-    background: #fff3ef;
-    color: #F77712;
+    background: var(--site-color-background);
+    color: var(--site-color-naranja);
     transition: all 0.2s ease;
 }
 
 
 #LogosContacto a {
-    color: #F77712; 
+    color: var(--site-color-naranja); 
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 #LogosContacto a:hover {
-    color: #783908;
+    color: var(--site-color-coffe);
 }
 
 /*Media query Pantallas pequeñas (Tablets, sm) */
