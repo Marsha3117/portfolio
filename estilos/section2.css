@@ -1,0 +1,144 @@
+.section2 {
+    background-color: #fff3ef; 
+    padding: 80px 100px;
+    text-align: left; 
+}
+
+.section2 h3 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f18e47; 
+    margin-bottom: 50px; 
+}
+
+.section2 .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+}
+
+
+/* Estilos Comunes de las Tarjetas (Aplica a card1, card2, etc.) */
+.section2 .card1,
+.section2 .card2,
+.section2 .card3,
+.section2 .card4 {
+    /* Manteníamos tus estilos de fondo y transición... */
+    background: rgb(122, 62, 17); /* Fondo oscuro de la tarjeta */
+    color: white; 
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    
+    /* Configuración principal de Flexbox para apilar los elementos (header y logos) */
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 15px; /* Padding general de la tarjeta */
+}
+
+/* 🆕 NUEVO ESTILO: Contenedor de Altura Fija (.card-header-content) */
+.card-header-content {
+    /* Esto es CLAVE: Fija la altura mínima para que la línea de división sea constante. */
+    min-height: 150px; 
+    
+    /* Flexbox para alinear el icono y el H4 dentro de esta altura fija */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* Centra el icono y el texto H4 */
+    justify-content: flex-start; /* Alinea el contenido desde la parte superior */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* 🔔 NOTA: El estilo para los iconos principales (img) debe ir así para que se muestre correctamente */
+.card-header-content img {
+    width: 50px; 
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Efecto Hover */
+.section2 .card1:hover,
+.section2 .card2:hover,
+.section2 .card3:hover,
+.section2 .card4:hover {
+    background: #f18e47; 
+    transform: translateY(-5px); 
+}
+
+.section2 .cards h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.section2 .cards img {
+    width: 50px; 
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.logos-herramientas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 10px;
+    padding-top: 15px;
+   border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    width: 100%;
+}
+
+.logos-herramientas img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+    margin: 0; 
+}
+
+/* Media query Pantallas medianas y pequeñas (Tablets, de 992px a 768px) */
+@media (max-width: 991.98px) {
+    
+    /* 1. Ajustar el padding de la sección para dar más espacio a los lados */
+    .section2 {
+        padding: 50px 30px; 
+        text-align: center; 
+    }
+    
+    /* 2. Cambiar la grilla de 4 a 2 columnas */
+    .section2 .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Reducir el espacio entre tarjetas */
+    }
+}
+
+/* Media query Pantallas muy pequeñas (Móviles, de 767px hacia abajo) */
+@media (max-width: 767.98px) {
+
+    .section2 {
+        padding: 30px 15px; 
+    }
+
+    .section2 h3 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    /* 3. Cambiar la grilla a 1 columna para la máxima legibilidad */
+    .section2 .cards {
+        grid-template-columns: 1fr;
+        gap: 25px; /* Ligeramente más espacio vertical */
+    }
+    
+    /* 4. Asegurar que las tarjetas estén centradas y apiladas correctamente */
+    .section2 .card1, 
+    .section2 .card2, 
+    .section2 .card3, 
+    .section2 .card4 {
+        align-items: center; 
+    }
+}

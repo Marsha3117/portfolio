@@ -1,0 +1,265 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%; 
+}
+
+html {
+    /* Desplazamiento suave al hacer clic en un enlace de anclaje */
+    scroll-behavior: smooth; 
+}
+/* ====== nav ====== */
+.nav {
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; funciona, pero para navegación se prefiere space-between 
+       o una simple alineación a los lados. Si funciona para ti, déjalo. */
+    justify-content: space-between; 
+    background-color: #fff3ef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+.navbar-menu a {
+    display: inline-block; 
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: black;
+} 
+
+/* ====== banner ====== */
+.banner {
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text {
+    max-width: 65%;
+    text-align: left; 
+}
+
+.banner h5 { /* Hola, soy */
+    font-weight: 550;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.banner h1 { /* Mariajosé Ramos */
+    font-weight: 800;
+    font-size: 58px;
+    color: #783908;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.banner h2 { /* Diseñadora Digital & Multimedia */
+    font-weight: 600;
+    font-size: 40px;
+    color: #F77712;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.banner-text h3 { /* Mi Enfoque: */
+    font-size: 24px; 
+    font-weight: 700;
+    color: #000000; 
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.banner-text p { /* Declaración de valor */
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    border-radius: 30px;
+    max-width: 30%;
+    height: auto;
+    align-self: flex-end;
+}
+
+
+/* ====== footer ====== */
+
+footer {
+    background-color: #fff3ef;
+}
+
+#LogoFooter {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+.container_footer .col-md-4 div {
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.container_footer .col-12.text-center {
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.container_footer .fw-bold {
+    letter-spacing: 0.8px;
+}
+
+row>div:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+
+.row>div:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+/*Media query Pantallas (sm y xs)  */
+@media (max-width: 767.98px) {
+    #LogoFitNation {
+        max-width: 120px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .container_footer .col-md-4 div {
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+    }
+
+    .container_footer .fw-bold {
+        letter-spacing: 0.5px;
+    }
+}
+
+
+/* ====== botones ver ====== */
+.ver {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #F77712; 
+    border-radius: 5px;
+    border: 1px solid #F77712;
+    cursor: pointer;
+}
+
+.ver:hover {
+    background: #fff3ef;
+    color: #F77712;
+    transition: all 0.2s ease;
+}
+
+
+#LogosContacto a {
+    color: #F77712; 
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#LogosContacto a:hover {
+    color: #783908;
+}
+
+/*Media query Pantallas pequeñas (Tablets, sm) */
+@media (max-width: 991.98px) {
+
+    .nav, .banner, .section2 {
+        padding: 50px 30px;
+    }
+    
+    /* Mostrar 2 columnas en lugar de 4 */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Media query Pantallas muy pequeñas (Móviles, xs) */
+@media (max-width: 767.98px) {
+    
+    /* === NAV === */
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .navbar-menu {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* === BANNER === */
+    .banner {
+        /* Apila el texto y la imagen verticalmente */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+    
+    .banner img {
+        max-width: 80%;
+        margin-top: 30px;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
+    
+}
