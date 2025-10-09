@@ -240,14 +240,22 @@ row>div:nth-child(2) {
     /* === NAV === */
     .nav {
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        align-items: center;
+        padding: 10px 20px;
     }
     
     .navbar-menu {
+        flex-direction: column;
         width: 100%;
-        justify-content: center;
         margin-top: 15px;
+        gap: 0;
+    }
+
+    .navbar-menu a {
+        width: 100%; 
+        text-align: center; 
+        padding: 10px 0; 
+        font-size: 18px;
     }
 
     /* === BANNER === */
