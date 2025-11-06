@@ -1,59 +1,163 @@
-.formulario, .formulario2 {
-    background-color: var(--site-color-darker);
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinea el contenido al inicio */
+    /* background-color: var(--site-color-background); */
+    padding: 60px 80px;
+    margin-bottom: 40px;
+    gap: 40px;
+    /* Espacio entre las dos columnas */
+    background-color: var(--site-color-background);
+}
+
+.ctaform {
+    flex-basis: 50%;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
-    padding: 40px 60px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    /* Alineación vertical al centro */
+    align-items: center;
+    /* Alineación horizontal al centro */
+    text-align: center;
 }
 
-
-
-.formulario label, .formulario2 label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #666;
-}
-
-.formulario input, .formulario textarea, .formulario2 input, .formulario2 textarea {
+.ctaform h2 {
+    color: var(--site-color-coffe);
+    font-size: 2.5em;
+    line-height: 1.2;
     margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
+    
+}
+
+.formulario h3 {
+    color: var(--site-color-coffe);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.formulario p {
+    color: var(--site-color-darker);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ctaform img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+.containerforms {
+    flex-basis: 50%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--site-color-lightorange);
+}
+
+.containerforms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerforms label {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--site-color-darker);
+}
+
+.containerforms input,
+.containerforms textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    /* Permite redimensionar solo verticalmente el textarea */
 }
 
-.formulario input[type="radio"], .formulario input[type="checkbox"], .formulario2 input[type="radio"], .formulario2 input[type="checkbox"] {
-    margin-right: 10px;
-    width: auto;
+.containerforms textarea {
+    min-height: 120px;
+    /* Altura mínima para el mensaje */
 }
 
-.formulario2 input[type="file"] {
-    margin-bottom: 20px;
+.botones-form {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
-.formulario2 p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.formulario button, .formulario2 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+.containerforms button {
+    padding: 12px 25px;
+    font-size: 1em;
     font-weight: bold;
-    color: #fff;
-    background-color: var(--site-color-naranja);
-    border: none;
+
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.formulario button[type="reset"], .formulario2 button[type="reset"] {
-    background-color: #ccc;
-    margin-right: 10px;
+.btnenviar {
+    background-color: var(--site-color-naranja);
+    margin-left: 15px;
+    border: 2px solid var(--site-color-naranja);
+    color: var(--site-color-background);
+}
+
+.btnenviar:hover {
+    background-color: var(--site-color-background);
+    color: var(--site-color-coffe);
+}
+
+.btnborrar {
+    background-color: var(--site-color-background);
+    color: var(--site-color-darker);
+    border: 2px solid var(--site-color-naranja);
+}
+
+.btnborrar:hover {
+    background-color: var(--site-color-naranja);
+    color: var(--site-color-background);
+    border: 2px solid var(--site-color-naranja);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    
+    .formulario {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .ctaform,
+    .containerforms {
+        flex-basis: 100%;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .ctaform h2 {
+        font-size: 2em;
+    }
+    
+    .ctaform img {
+        max-width: 60%;
+    }
+    
+    .containerforms {
+        padding: 20px;
+    }
+    
 }

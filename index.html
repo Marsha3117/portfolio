@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="estilos/styles.css">
     <link rel="stylesheet" href="estilos/section2.css">
     <link rel="stylesheet" href="estilos/portfolio.css">
+    <link rel="stylesheet" href="estilos/form.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
 
                 <h3>Mi Enfoque:</h3>
                 <p>
-                    Doy vida a marcas con diseños estéticos, funcionales y enfocados en el usuario.
+                    Doy vida a proyectos con diseños estéticos, funcionales y enfocados en el usuario.
                     Garantizo soluciones completas al unir la estética con la optimización técnica.
                 </p>
                 <!-- 
@@ -160,53 +161,65 @@
         </section>
 
 
+        <!-- <section class="sobremi">
+
+            <h3>Sobre mí</h3>
+            <div class="sobremi-text">
+                <h4>Soluciones Digitales, de la Idea al Código.</h4>
+                <p>
+                    ¡Hola! Soy Mariajosé, una profesional con un perfil full stack que fusiona la estética del diseño multimedia con la lógica robusta del desarrollo. Mi pasión es crear soluciones digitales que no solo sean visualmente atractivas y ordenadas, sino también funcionales y eficientes en su código. Mi expertise me permite transicionar fluidamente entre la planificación UX/UI y la implementación en backend.
+                </p>
+
+            </div>
+            <div>
+                <img src="images/5.png" alt="ilustracionmajo">
+            </div>
+        </section> -->
+
+
         <section class="formulario">
-            <h3>Contacto</h3>
-            <form action="/registro" method="GET">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" name="correo" id="correo">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" name="telefono" id="telefono">
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje"></textarea>
-                <button type="reset">Borrar</button>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
 
-        <section class="formulario2">
-            <h3>Solicitud de servicio</h3>
-            <form action="/registro" method="GET">
-                <label for="nombre-completo">Nombre Completo:</label>
-                <input type="text" name="nombre-completo" id="nombre-completo">
-                <label for="correo-servicio">Correo electrónico:</label>
-                <input type="email" name="correo-servicio" id="correo-servicio">
+            <div class="ctaform">
+                <h2>¿Te gusta lo que ves?
+                    <br>¡Trabajemos juntos!</h3>
 
-                <label for="presupuesto">¿Cuál es su presupuesto?</label>
-                <input type="radio" name="presupuesto" value="menos-500000">Menos de $500.000
-                <input type="radio" name="presupuesto" value="500000-1000000">Entre $500.000 y $1'000.000
-                <input type="radio" name="presupuesto" value="mas-1000000">Más de $1'000.000
+                <p>Mi bandeja de entrada está abierta. Contáctame para resolver dudas, explorar oportunidades o
+                    solicitar una asesoría.</p>
 
-                <label for="servicio-interes">¿En qué servicio tiene interés?</label>
-                <input type="checkbox" name="servicio-interes" value="ilustracion">Ilustración
-                <input type="checkbox" name="servicio-interes" value="identidad-marca">Identidad de marca
-                <input type="checkbox" name="servicio-interes" value="animacion">Animación
-                <input type="checkbox" name="servicio-interes" value="otro">Otro
+                    <img src="images/5.png" alt="fotomajo">
 
-                <label for="descripcion-solicitud">Describa su solicitud:</label>
-                <textarea name="descripcion-solicitud" id="descripcion-solicitud"></textarea>
+                <p>Conectemos en redes: Puedes enviarme un mensaje directo para cualquier consulta.
+                    <br>¡Sígueme en Instagram para ver mis últimos proyectos, novedades y más!
+                </p>
+            </div>
+            <div class="containerforms">
+                <h3>Contacto</h3>
+                <form action="/registro" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required placeholder="Tu Nombre" aria-required="true">
 
-                <label>Si tiene algún archivo de referencia puede incluírlo:</label>
-                <input type="file" name="referencia" accept="multiple">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" name="correo" id="correo" required placeholder="ejemplo@correo.com"
+                        aria-required="true">
 
-                <p>*También puede contactarse por los distintos canales disponibles para una asesoía más personalizada,
-                    se dará respuesta a solicitud en los siguientes 10 días hábiles*</p>
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="(+XX) XXXX-XXXX">
 
-                <button type="reset">Borrar</button>
-                <button type="submit">Enviar</button>
-            </form>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" name="asunto" id="asunto" required aria-required="true">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Cuéntame sobre tu proyecto o duda..."
+                        aria-required="true"></textarea>
+
+                    <div class="botones-form">
+                        <button type="reset" class="btnborrar">Borrar</button>
+                        <button type="submit" class="btnenviar">¡Hablemos!</button>
+                    </div>
+                </form>
+
+            </div>
+
         </section>
 
         <footer>
@@ -274,4 +287,5 @@
     </main>
     <script src="https://kit.fontawesome.com/758055d3f3.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

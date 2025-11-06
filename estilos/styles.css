@@ -70,14 +70,14 @@ html {
 } 
 
 /* ====== banner ====== */
-.banner {
+.banner{
     padding: 40px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.banner-text {
+.banner-text{
     max-width: 65%;
     text-align: left; 
 }
@@ -105,7 +105,7 @@ html {
     margin-bottom: 30px;
 }
 
-.banner-text h3 { /* Mi Enfoque: */
+.banner-text h3{ /* Mi Enfoque: */
     font-size: 24px; 
     font-weight: 700;
     color: var(--site-color-darker); 
@@ -113,7 +113,7 @@ html {
     margin-bottom: 15px;
 }
 
-.banner-text p { /* Declaración de valor */
+.banner-text p{ /* Declaración de valor */
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
@@ -122,13 +122,22 @@ html {
     margin-bottom: 20px;
 }
 
-.banner img {
+.banner img{
     border-radius: 30px;
     max-width: 30%;
     height: auto;
     align-self: flex-end;
 }
 
+
+/* ===== Sobre mí ====== */
+
+.sobremi h3 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--site-color-naranja); 
+    margin-bottom: 50px; 
+}
 
 /* ====== footer ====== */
 
