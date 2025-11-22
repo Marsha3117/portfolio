@@ -9,7 +9,7 @@
     margin-bottom: 40px;
     gap: 40px;
     /* Espacio entre las dos columnas */
-    background-color: var(--site-color-background);
+    /* background-color: var(--site-color-background); */
 }
 
 .ctaform {

@@ -122,59 +122,245 @@
             </div>
         </section>
 
-        <section class="info" id="portafolio">
-            <h3>Portafolio</h3>
-            <aside class="cubos">
-                <div>
-                    <img src="images/foodg.PNG" alt="Niña con mochila">
-                    <h4>Food G</h4>
-                    <p>Creación de manual de ideantidad de tienda de alimentos gourmet</p>
-                    <a href="URL_DEL_ENLACE_1" target="_blank">
-                        <button id="btn1">Ver</button>
-                    </a>
-                </div>
-                <div>
-                    <img src="images/cuentomomia.png" alt="Libro">
-                    <h4>La momia "No quiero"</h4>
-                    <p>Ilustración de cuento infantil la momia "No quiero"</p>
-                    <a href="https://issuu.com/marsha3117/docs/cuento_momia" target="_blank">
-                        <button id="btn1">Ver</button>
-                    </a>
-                </div>
-                <div>
-                    <img src="images/billieeillish.png" alt="Abierto">
-                    <h4>Trailer Billie Eilish</h4>
-                    <p>Recopilación y edición de video para crear la intro a un documental de Billie Eillish</p>
-                    <a href="https://www.youtube.com/watch?v=-nHzr5KeiG4" target="_blank">
-                        <button id="btn1">Ver</button>
-                    </a>
-                </div>
-                <div>
-                    <img src="images/reciclayvive.jpg" alt="Abierto">
-                    <h4>Recicla y vive</h4>
-                    <p>Creación de una revista digital interactiva acerca del aprovechamiento de residuos orgánicos</p>
-                    <a href="https://issuu.com/marsha3117/docs/recicla_y_vive" target="_blank">
-                        <button id="btn1">Ver</button>
-                    </a>
-                </div>
-            </aside>
-        </section>
+        <section id="portafolio" class="py-5">
+    <div class="container">
+        <h3>Portafolio</h3>
 
+        <ul class="nav nav-tabs justify-content-center mb-4" id="portfolioTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="marca-tab" data-bs-toggle="tab" data-bs-target="#marca"
+                    type="button" role="tab" aria-controls="marca" aria-selected="true">Diseño de Marca /
+                    Editorial</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ilustracion-tab" data-bs-toggle="tab" data-bs-target="#ilustracion"
+                    type="button" role="tab" aria-controls="ilustracion"
+                    aria-selected="false">Ilustración</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="multimedia-tab" data-bs-toggle="tab" data-bs-target="#multimedia"
+                    type="button" role="tab" aria-controls="multimedia" aria-selected="false">Multimedia /
+                    Audiovisual</button>
+            </li>
+        </ul>
 
-        <!-- <section class="sobremi">
+        <div class="tab-content" id="portfolioTabsContent">
 
-            <h3>Sobre mí</h3>
-            <div class="sobremi-text">
-                <h4>Soluciones Digitales, de la Idea al Código.</h4>
-                <p>
-                    ¡Hola! Soy Mariajosé, una profesional con un perfil full stack que fusiona la estética del diseño multimedia con la lógica robusta del desarrollo. Mi pasión es crear soluciones digitales que no solo sean visualmente atractivas y ordenadas, sino también funcionales y eficientes en su código. Mi expertise me permite transicionar fluidamente entre la planificación UX/UI y la implementación en backend.
+            <div class="tab-pane fade show active" id="marca" role="tabpanel" aria-labelledby="marca-tab">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto">
+                            <img src="images/Logo redes 2 Danas.jpg" class="img-proyecto" alt="Logo Dannas">
+                            <h4 class="titulo-proyecto">Dannas</h4>
+                            <p class="descripcion-proyecto">Rebranding para marca de accesorios y variedades.
+                            </p>
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal"
+                                data-bs-target="#modalDannas"> Ver Proyecto</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto">
+                            <img src="images/Logo redes Natú.jpg" class="img-proyecto" alt="Marca Natú">
+                            <h4 class="titulo-proyecto">Natú</h4>
+                            <p class="descripcion-proyecto">Creación de brandboard para marca de productos
+                                naturales.</p>
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal"
+                                data-bs-target="#modalNatu"> Ver Proyecto</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto">
+                            <img src="images/foodg.PNG" class="img-proyecto" alt="Identidad de Food G">
+                            <h4 class="titulo-proyecto">Food G</h4>
+                            <p class="descripcion-proyecto">Creación de manual de identidad de tienda de
+                                alimentos gourmet.</p>
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal"
+                                data-bs-target="#modalFoodG"> Ver Proyecto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="ilustracion" role="tabpanel" aria-labelledby="ilustracion-tab">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto"> 
+                            <img src="images/cuentomomia.png" class="img-proyecto" alt="Ilustración Cuento">
+                            <h4 class="titulo-proyecto">La momia "No quiero"</h4>
+                            <p class="descripcion-proyecto">Ilustración de cuento infantil la momia "No quiero".</p> 
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal"
+                                data-bs-target="#modalMomia">Ver Proyecto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="multimedia" role="tabpanel" aria-labelledby="multimedia-tab">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto">
+                            <img src="images/reciclayvive.jpg" class="img-proyecto" alt="Revista Recicla y Vive">
+                            <h4 class="titulo-proyecto">Recicla y vive</h4>
+                            <p class="descripcion-proyecto">Creación de una revista digital interactiva acerca del aprovechamiento de residuos orgánicos.</p>
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal" data-bs-target="#modalReciclaVive">Ver Proyecto</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tarjeta-proyecto"> 
+                            <img src="images/billieeillish.png" class="img-proyecto" alt="Trailer Documental Billie Eilish">
+                            <h4 class="titulo-proyecto">Trailer Billie Eilish</h4>
+                            <p class="descripcion-proyecto">Recopilación y edición de video para crear la intro a un documental de Billie Eillish.</p>
+                            <button type="button" class="btn-ver-proyecto" data-bs-toggle="modal" data-bs-target="#modalBillie">Ver Proyecto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="modalDannas" tabindex="-1" aria-labelledby="modalDannasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDannasLabel">Dannas - Rebranding y Piezas Visuales</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/Logo redes 2 Danas.jpg" class="img-fluid mb-3" alt="Logo Dannas">
+                <p><strong>Tipo de Proyecto:</strong> Branding / Rebranding.</p>
+                <p><strong>Descripción:</strong> Actualización y modernización de la marca de accesorios y variedades "Dannas". Se trabajó en la identidad visual completa para reflejar un estilo más fresco y actual, optimizando la aplicación en redes sociales y etiquetas de producto.</p>
+                <p><strong>Lo que se logró:</strong> Una imagen renovada que conecta mejor con el público objetivo, facilitando la expansión de la marca.</p>
+                <a href="#" class="btn btn-secondary" target="_blank">Ver Proyecto Completo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalNatu" tabindex="-1" aria-labelledby="modalNatuLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalNatuLabel">Natú - Creación de Marca (Brandboard)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/Logo redes Natú.jpg" class="img-fluid mb-3" alt="Marca Natú">
+                <p><strong>Tipo de Proyecto:</strong> Branding / Creación de Marca.</p>
+                <p><strong>Descripción:</strong> Desarrollo del brandboard (tablero de marca) para Natú, una línea de productos naturales. Esto incluyó la definición de la paleta de colores orgánicos, tipografía y la conceptualización del logotipo para transmitir autenticidad y bienestar.</p>
+                <p><strong>Lo que se logró:</strong> Una base visual sólida y coherente para el lanzamiento de la marca en el sector de bienestar y ecología.</p>
+                <a href="#" class="btn btn-secondary" target="_blank">Ver Brandboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalFoodG" tabindex="-1" aria-labelledby="modalFoodGLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalFoodGLabel">Food G - Identidad de Marca</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/foodg.PNG" class="img-fluid mb-3" alt="Identidad de Food G">
+                <p><strong>Tipo de Proyecto:</strong> Branding / Diseño de Marca.</p>
+                <p><strong>Descripción:</strong> Creación integral del manual de identidad para una futura
+                    tienda de alimentos gourmet, incluyendo logotipos, paleta de colores, tipografía y
+                    lineamientos de aplicación.</p>
+                <p><strong>Lo que se logró:</strong> Una identidad visual sofisticada y apetecible que posiciona
+                    la marca dentro del segmento premium.</p>
+                <a href="#" class="btn btn-secondary" target="_blank">Ver PDF de Marca</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalMomia" tabindex="-1" aria-labelledby="modalMomiaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMomiaLabel">La momia "No quiero" - Ilustración Infantil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/cuentomomia.png" class="img-fluid mb-3" alt="Ilustración Cuento">
+                <p><strong>Tipo de Proyecto:</strong> Ilustración Digital.</p>
+                <p><strong>Descripción:</strong> Desarrollo de ilustraciones para un cuento infantil,
+                    enfocándose en un estilo amigable y divertido para el público meta, manteniendo la cohesión
+                    visual de la historia.</p>
+                <p><strong>Ver trabajo completo en:</strong></p>
+                <a href="https://issuu.com/marsha3117/docs/cuento_momia" class="btn btn-secondary"
+                    target="_blank">Ver Cuento en Issuu</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBillie" tabindex="-1" aria-labelledby="modalBillieLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBillieLabel">Trailer Billie Eilish - Edición de Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9 mb-3">
+                    <iframe src="https://www.youtube.com/embed/-nHzr5KeiG4" title="YouTube video player"
+                        allowfullscreen></iframe>
+                </div>
+                <p><strong>Tipo de Proyecto:</strong> Edición de Video / Postproducción.</p>
+                <p><strong>Descripción:</strong> Proyecto de recopilación y edición de material para crear una
+                    introducción dinámica y atractiva a un documental ficticio sobre la artista Billie Eilish.
                 </p>
+                <p><strong>Ver en YouTube:</strong></p>
+                <a href="https://www.youtube.com/watch?v=-nHzr5KeiG4" class="btn btn-secondary"
+                    target="_blank">Ver Video en YouTube</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal fade" id="modalReciclaVive" tabindex="-1" aria-labelledby="modalReciclaViveLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalReciclaViveLabel">Recicla y vive - Revista Digital</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
-            <div>
-                <img src="images/5.png" alt="ilustracionmajo">
+            <div class="modal-body">
+                <img src="images/reciclayvive.jpg" class="img-fluid mb-3" alt="Revista Recicla y Vive">
+                <p><strong>Tipo de Proyecto:</strong> Diseño Editorial Digital.</p>
+                <p><strong>Descripción:</strong> Creación de una revista digital interactiva, con diseño
+                    enfocado en la usabilidad y la ecología, acerca del aprovechamiento de residuos orgánicos.
+                </p>
+                <p><strong>Ver revista en:</strong></p>
+                <a href="https://issuu.com/marsha3117/docs/recicla_y_vive" class="btn btn-secondary"
+                    target="_blank">Ver Revista en Issuu</a>
             </div>
-        </section> -->
+        </div>
+    </div>
+</div>
+
+
+        
+       <section class="sobremi">
+    <h3>Sobre mí</h3>
+
+    <div class="sobremi-wrapper">
+        <div class="sobremi-text">
+            <h4>Soluciones Digitales, de la Idea al Código.</h4>
+            <p>
+                ¡Hola! Soy Mariajosé, una profesional con un perfil full stack que fusiona la estética del diseño multimedia con la lógica robusta del desarrollo. Mi pasión es crear soluciones digitales que no solo sean visualmente atractivas y ordenadas, sino también funcionales y eficientes en su código. Mi expertise me permite transicionar fluidamente entre la planificación UX/UI y la implementación en backend.
+            </p>
+        </div>
+        
+        <div class="sobremi-imagen"> <img src="images/5.png" alt="ilustracionmajo">
+        </div>
+    </div>
+</section>
 
 
         <section class="formulario">
@@ -183,14 +369,14 @@
                 <h2>¿Te gusta lo que ves?
                     <br>¡Trabajemos juntos!</h3>
 
-                <p>Mi bandeja de entrada está abierta. Contáctame para resolver dudas, explorar oportunidades o
-                    solicitar una asesoría.</p>
+                    <p>Mi bandeja de entrada está abierta. Contáctame para resolver dudas, explorar oportunidades o
+                        solicitar una asesoría.</p>
 
                     <img src="images/5.png" alt="fotomajo">
 
-                <p>Conectemos en redes: Puedes enviarme un mensaje directo para cualquier consulta.
-                    <br>¡Sígueme en Instagram para ver mis últimos proyectos, novedades y más!
-                </p>
+                    <p>Conectemos en redes: Puedes enviarme un mensaje directo para cualquier consulta.
+                        <br>¡Sígueme en Instagram para ver mis últimos proyectos, novedades y más!
+                    </p>
             </div>
             <div class="containerforms">
                 <h3>Contacto</h3>
@@ -275,7 +461,6 @@
 
                 </div>
             </div>
-            </div>
 
             <div class="row">
                 <div class="col-12 text-center" style="font-size: 0.8em;">
@@ -285,6 +470,9 @@
 
         </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/758055d3f3.js" crossorigin="anonymous"></script>
 </body>
 

@@ -1,62 +1,154 @@
-.info {
+/* ============================================== */
+/* ESTILOS DE LA SECCIÓN PRINCIPAL (Contenedor de Pestañas) */
+/* ============================================== */
 
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    padding: 80px 100px;
-}
-
-.cubos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.info img{
-    width: 300px;
-    height: 300px;
-}
+/* NOTA: Tu sección original se llamaba .info, pero ahora está contenida dentro del layout de Bootstrap. 
+   Usaré selectores más específicos para evitar conflictos. */
 
 
-.info div {
+
+/* ============================================== */
+/* ESTILOS DE LA TARJETA INDIVIDUAL (Tus estilos .info div) */
+/* ============================================== */
+
+/* Reemplazamos .info div por .tarjeta-proyecto */
+.tarjeta-proyecto {
+    /* Estilos del contenedor de la tarjeta */
     padding: 40px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 0 10px;
-    max-width: 300px;
+    margin: 10px 0; /* Ajustado para funcionar mejor con Bootstrap col- */
+    max-width: 100%; /* El ancho lo maneja col-lg-4, no necesitamos max-width fijo */
     text-align: left;
+    height: 100%; /* Asegura que todas las tarjetas sean de la misma altura */
+    display: flex; /* Para controlar la disposición interna */
+    flex-direction: column;
 }
 
+/* ============================================== */
+/* ESTILOS DE LOS ELEMENTOS INTERNOS */
+/* ============================================== */
 
+/* Imágenes (Reemplazamos .info img por .img-proyecto) */
+.img-proyecto {
+    width: 200px; /* Ancho fijo como lo tenías */
+    height: 200px; /* Altura fija como lo tenías */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    margin-bottom: 15px;
+}
 
-.info h4 {
-    font-weight: 700;
-    font-size: 30px;
+/* Títulos H4 (Reemplazamos .info h4 por .titulo-proyecto) */
+.titulo-proyecto {
+    font-weight: 600;
+    font-size: 28px;
     color: var(--site-color-darker);
-    
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.info p {
+/* Párrafos (Reemplazamos .info p por .descripcion-proyecto) */
+.descripcion-proyecto {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: #5e5c5c;
+    flex-grow: 1; /* Permite que el párrafo empuje el botón hacia abajo */
+    margin-bottom: 10px;
 }
-.info #btn1{
+
+/* Botón (Reemplazamos .info #btn1 por .btn-ver-proyecto) */
+.btn-ver-proyecto {
+    /* Estilos base */
     border: 1px solid #f18e47;
     background: #f18e47;
     color: var(--site-color-darker);
     padding: 10px;
     cursor: pointer;
+    font-weight: 600;
     min-width: min-content;
-    max-width: 30%;
+    width: 100%; /* Ajuste: Ocupa el 100% para ser más amigable al tacto */
+    max-width: 50%; /* Opcional: Si quieres limitar el ancho */
     border-radius: 5px;
+    margin-top: auto; /* Asegura que el botón se pegue a la parte inferior (gracias a flex-grow: 1) */
 }
 
-.info #btn1:hover{
-    border: 1px solid var(--site-color-background);
+/* Estilos de Hover para el Botón */
+.btn-ver-proyecto:hover {
     background: var(--site-color-background);
     color: #f18e47;
 }
 
+/* ============================================== */
+/* ESTILOS REMOVIDOS / REEMPLAZADOS */
+/* ============================================== */
 
+/* NOTA: Estas clases NO son necesarias o deben ser manejadas por Bootstrap: */
+
+/* .info (Ya no es necesario, el espaciado lo dan los paddings de Bootstrap container) */
+/* .cubos (El layout horizontal y el wrap ahora son manejados por <div class="row"> y los col-xx) */
+
+/* ============================================== */
+/* ESTILOS DE PESTAÑAS (TABS) */
+/* ============================================== */
+
+/* Estilo para los botones de las pestañas */
+.nav-tabs .nav-link {
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid transparent; /* Para el efecto de hover */
+    color: #5e5c5c; /* Color del texto inactivo */
+    margin: 0 10px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el hover de los botones */
+.nav-tabs .nav-link:hover {
+    color: var(--site-color-darker); /* Color de tu marca */
+    border-bottom-color: #f18e47; /* Color de acento al pasar el ratón */
+}
+
+/* Estilo para la pestaña ACTIVA */
+.nav-tabs .nav-link.active {
+    color: var(--site-color-darker); /* Color oscuro de tu marca */
+    background-color: transparent;
+    border-color: #f18e47; /* Línea de acento naranja */
+    border-bottom: 3px solid #f18e47;
+}
+
+/* Eliminar el borde feo del contenedor ul de tabs */
+.nav-tabs {
+    border-bottom: none; 
+}
+
+
+/* ============================================== */
+/* ESTILOS DE MODALES (Títulos y Botones) */
+/* ============================================== */
+
+/* Título principal del Modal (H5 de Bootstrap) */
+.modal-title {
+    /* Usando los estilos de tus H4 originales para el título dentro del modal */
+    font-weight: 700;
+    font-size: 30px !important; /* Importante para asegurar que prevalezca */
+    color: var(--site-color-darker);
+}
+
+/* Botones dentro del Modal (Ejemplo: "Ver Cuento en Issuu") */
+/* Sobreescribe el estilo predeterminado .btn-secondary */
+.modal-body .btn-secondary {
+    /* Estilo del botón similar a tu btn-ver-proyecto */
+    border: 1px solid #f18e47;
+    background: #f18e47;
+    color: var(--site-color-darker);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modal-body .btn-secondary:hover {
+    border: 1px solid var(--site-color-background);
+    background: var(--site-color-background);
+    color: #f18e47;
+}
